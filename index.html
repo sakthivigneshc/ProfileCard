@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon1.png">
+
+    <style>
+
+
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),url("images/bg_img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+
+
+}
+       
+h1{
+    text-align: center;
+    color:white;    
+    font-size: 60px;
+
+   }
+
+
+
+.content{
+    text-align: center;
+    border: 5px solid navajowhite;
+    width:40%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 296px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 50%;
+  padding: 10px;
+  font-size: 18px;
+}
+
+
+input[type="text"]{
+    margin-top: 18px;
+}
+
+
+.container{
+    margin-top: 100px;
+
+}
+
+#loginbtn{
+    padding-left : 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: black;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+#uname,#pwd{
+    color: white;
+    font-size: 18px;
+    background-color: black;
+}
+
+</style>
+
+
+<script>
+    function validip(){
+  
+        event.preventDefault(); // Prevent the default form submission behavior
+
+  const vname ="username";
+  const vpword ="pass123";
+  const userip =document.getElementById("name1").value;
+  const pwdip =document.getElementById("pwd1").value;
+  if(userip==vname && pwdip == vpword ){
+    
+//    window.open("index.html");
+window.location.href = "index.html"; // Use window.location.href to navigate to the new page
+
+  
+  }
+  else{
+    alert("Invalid username or password");
+  }
+}
+</script>
+    <title>LoginPage</title>
+</head>
+<body>
+
+    <div class="container">
+    <h1>Login</h1>
+<div class="content">
+    <form>
+
+        <input for="username" type="text" placeholder="Enter your username"  id="name1" autocomplete="off"
+        required> <br> <br> <span id="uname">Username is username</span> <br> <br><br>
+
+
+        <input for="pasword" type="password" placeholder="Enter your password"  id="pwd1" autocomplete="off" required> <br> <br> <span id="pwd">Password is pass123</span>  <br> <br>
+        
+
+        <input type="submit" value="login" id="loginbtn" onclick="validip()" >
+
+    </form>
+</div>
+</div>
+</body>
+</html>
